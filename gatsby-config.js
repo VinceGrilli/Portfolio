@@ -39,13 +39,13 @@ const plugins = [
 
 module.exports = client.getEntries().then(entries => {
   const { mediumUser } = entries.items.find(getAboutEntry).fields;
-
-  plugins.push({
-    resolve: 'gatsby-source-medium',
-    options: {
-      username: mediumUser || '@medium',
-    },
-  });
+  // gatsby-source-medium is currently broken, commented out until pluging is fixed
+  // plugins.push({
+  //   resolve: 'gatsby-source-medium',
+  //   options: {
+  //     username: mediumUser || '@medium',
+  //   },
+  // });
 
   if (ANALYTICS_ID) {
     plugins.push({
