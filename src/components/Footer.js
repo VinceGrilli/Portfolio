@@ -54,9 +54,6 @@ const Footer = () => (
                 <Link href="https://www.contentful.com/" mr={1}>
                   Contentful
                 </Link>
-                <span role="img" aria-label="heart">
-                  ❤️
-                </span>
               </TextFooter>
             </Fade>
             <Flex>
