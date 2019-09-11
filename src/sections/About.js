@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
+import Skill from '../components/Skill';
 import markdownRenderer from '../components/MarkdownRenderer';
 
 const Background = () => (
@@ -74,6 +75,11 @@ const About = () => (
         const { aboutMe, profile, skills } = data.contentfulAbout;
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
+            <Box>
+              {skills.map(skill => (
+                <Skill name={skill.name} logo={skill.logo.fixed.src} />
+              ))}
+            </Box>
             <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
               <Fade bottom>
                 <ReactMarkdown

@@ -5,11 +5,12 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const SkillIcon = styled(Image)`
+  margin: 0 2%;
   transition: transform 0.5s ease;
 
   &:hover {
-    transform: scale(1.2);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 18px 16px -16px rgba(0, 0, 0, 0.2);
   }
 `;
 
