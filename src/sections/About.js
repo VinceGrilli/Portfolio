@@ -43,7 +43,7 @@ const ProfilePicture = styled(Image)`
 
 const About = () => (
   <Section.Container id="about" Background={Background}>
-    <Section.Header name="About me" icon="🙋‍♂️" label="person" />
+    <Section.Header name="About me" icon="♂️" label="person" />
     <StaticQuery
       query={graphql`
         query AboutMeQuery {
@@ -59,11 +59,19 @@ const About = () => (
                 src
               }
             }
+            skills {
+              name
+              logo {
+                fixed(height: 100, width: 100) {
+                  src
+                }
+              }
+            }
           }
         }
       `}
       render={data => {
-        const { aboutMe, profile } = data.contentfulAbout;
+        const { aboutMe, profile, skills } = data.contentfulAbout;
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
             <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
