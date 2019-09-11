@@ -1,28 +1,21 @@
 import React from 'react';
+import { Image } from 'rebass';
 import { Tooltip } from 'react-tippy';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const IconLink = styled(Link)`
-  transition: color 0.5s;
-  color: ${props =>
-    props.theme.colors[props.color] || props.theme.colors.primary};
-  text-decoration: none;
+const SkillIcon = styled(Image)`
+  transition: transform 0.5s ease;
 
   &:hover {
-    color: ${props => props.theme.colors.primaryLight};
+    transform: scale(1.2);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
   }
 `;
 
 const Skill = ({ name, logo }) => (
   <Tooltip title={name} position="bottom" trigger="mouseenter">
-    <IconLink
-      href={url}
-      target="_blank"
-      color={color}
-      rel="noreferrer"
-      aria-label={name}
-    />
+    <SkillIcon src={logo} alt={name} />
   </Tooltip>
 );
 
