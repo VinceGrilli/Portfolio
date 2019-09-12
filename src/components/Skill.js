@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const SkillIcon = styled(Image)`
-  margin: 0 2%;
+  margin: 2%;
   transition: transform 0.5s ease;
 
   &:hover {

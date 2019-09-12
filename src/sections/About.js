@@ -62,6 +62,7 @@ const About = () => (
             }
             skills {
               name
+              id
               logo {
                 fixed(height: 100, width: 100) {
                   src
@@ -77,7 +78,11 @@ const About = () => (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
             <Box>
               {skills.map(skill => (
-                <Skill name={skill.name} logo={skill.logo.fixed.src} />
+                <Skill
+                  key={skill.id}
+                  name={skill.name}
+                  logo={skill.logo.fixed.src}
+                />
               ))}
             </Box>
             <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
